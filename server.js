@@ -21,7 +21,7 @@ mongoose
     useFindAndModify: false,
   })
   .then((con) => {
-    console.log(con.connections);
+    // console.log(con.connections);
     console.log('Connection successfully!');
   });
 
