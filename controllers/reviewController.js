@@ -2,7 +2,6 @@ const Review = require('../models/reviewModel');
 // const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 
-// extraemos la parte de setear estos datos en una funcion de middleware
 exports.setTourUsersIds = (req, res, next) => {
   if (!req.body.tour) req.body.tour = req.params.tourId;
   if (!req.body.user) req.body.user = req.user.id;
@@ -10,7 +9,6 @@ exports.setTourUsersIds = (req, res, next) => {
 };
 
 exports.createReview = factory.createOne(Review);
-// utilizamos funciones getOne y getAll
 exports.getReview = factory.getOne(Review);
 exports.getAllReviews = factory.getAll(Review);
 exports.updateReview = factory.updateOne(Review);

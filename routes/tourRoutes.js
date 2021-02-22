@@ -5,8 +5,6 @@ const reviewRouter = require('../routes/reviewRoutes');
 
 const router = express.Router();
 
-// vamos a manejar todos los request que tengan esta url con el reviewRouter
-// es lo mismo que cuando montamos los router en el app.js
 router.use('/:tourId/reviews', reviewRouter);
 
 router

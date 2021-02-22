@@ -116,7 +116,6 @@ const tourSchema = new mongoose.Schema(
   }
 );
 
-// 1 orden ascendente -1 orden descendente
 tourSchema.index({ price: 1, ratingsAverage: -1 });
 tourSchema.index({ slug: 1 });
 tourSchema.index({ startLocation: '2dsphere' });
