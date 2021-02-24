@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: natours-api-tours
+  labels:
+    app: natours-api-tours
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: natours-api-tours
+  template:
+    metadata:
+      labels:
+        app: natours-api-tours
+    spec:
+      containers:
+      - name: natours-api-tours
+        image: borjasprodolliet/natours-api-tours
+        ports:
+        - containerPort: 80
